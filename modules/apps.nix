@@ -45,6 +45,7 @@
       "firefox"
       "bitwarden"
       "claude"
+      "claude-code"
       "localsend"
       "ghostty"
       "pearcleaner"
