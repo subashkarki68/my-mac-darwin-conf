@@ -64,7 +64,6 @@
       "localsend"
       "ghostty"
       "pearcleaner"
-      "wezterm"
       "mac-mouse-fix"
       "ollama-app"
       "obsidian"

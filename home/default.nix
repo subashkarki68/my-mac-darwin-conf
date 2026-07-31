@@ -7,7 +7,6 @@
     ./gh.nix
     ./starship.nix
     ./fzf-bat.nix
-    ./wezterm.nix
     ./neovim.nix
   ];
 
