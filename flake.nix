@@ -22,7 +22,18 @@
       inputs.nixpkgs.follows = "nixpkgs-darwin";
     };
 
-    nix-homebrew.url = "github:zhaofengli/nix-homebrew";
+    # nix-homebrew pins brew 6.0.12, which predates the `command_wrapper`
+    # cask stanza used by casks like firefox. Override it with a release
+    # that understands it.
+    brew-src = {
+      url = "github:Homebrew/brew/6.0.14";
+      flake = false;
+    };
+
+    nix-homebrew = {
+      url = "github:zhaofengli/nix-homebrew";
+      inputs.brew-src.follows = "brew-src";
+    };
   };
 
   outputs = inputs @ {
