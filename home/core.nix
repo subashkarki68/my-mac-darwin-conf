@@ -4,32 +4,20 @@
 }: {
   home.packages = with pkgs; [
     # archives
-    zip
     xz
-    unzip
-    p7zip
+    zstd
 
     # utils
     ripgrep
     yq-go
 
-    aria2
-    socat
-    nmap
-
-    # misc
-    cowsay
-    file
-    which
+    # GNU variants, deliberately shadowing the BSD tools macOS ships
     gnused
     gnutar
     gawk
-    zstd
-    caddy
     gnupg
 
     # productivity
-    glow
     zoxide
     tmux
   ];
@@ -67,11 +55,6 @@
           sort_dir_first = true;
         };
       };
-    };
-
-    skim = {
-      enable = true;
-      enableBashIntegration = true;
     };
 
     tmux = {
