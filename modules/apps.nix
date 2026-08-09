@@ -1,12 +1,10 @@
-{
-  pkgs,
-  ...
-}: {
+{pkgs, ...}: {
   environment.systemPackages = with pkgs; [
     git
     gh
     jq
     fd
+    mutagen
 
     curl
     wget
@@ -15,6 +13,9 @@
     roboto
     noto-fonts
     noto-fonts-color-emoji
+
+    (writeShellScriptBin "install-rosetta" (builtins.readFile ../scripts/install-rosetta.sh))
+    (writeShellScriptBin "uninstall-rosetta" (builtins.readFile ../scripts/uninstall-rosetta.sh))
   ];
   environment.variables.EDITOR = "nvim";
 
@@ -43,6 +44,7 @@
 
     casks = [
       "firefox"
+      "google-chrome"
       "bitwarden"
       "claude"
       "claude-code"
@@ -56,6 +58,7 @@
       "dbeaver-community"
       "bruno"
       "iina"
+      "kde-connect"
       "raycast"
       "stats"
       "docker-desktop"

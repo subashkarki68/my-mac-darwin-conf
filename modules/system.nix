@@ -13,7 +13,7 @@
         tilesize = 24;
         magnification = true;
 
-        wvous-tl-corner = 2;
+        wvous-tl-corner = 1;
         wvous-bl-corner = 3;
         wvous-br-corner = 4;
       };
@@ -78,6 +78,7 @@
           HideDesktop = 0;
           StageManagerHideWidgets = 0;
           StandardHideWidgets = 0;
+          AnimationSpeed = 5;
         };
         "com.apple.screensaver" = {
           askForPassword = 1;
@@ -91,6 +92,11 @@
           allowApplePersonalizedAdvertising = false;
         };
         "com.apple.ImageCapture".disableHotPlug = true;
+        "com.apple.Safari" = {
+          IncludeDevelopMenu = true;
+          WebKitDeveloperExtras = true;
+          IncludeInternalDebugMenu = true;
+        };
       };
 
       loginwindow = {
